@@ -1,0 +1,63 @@
+10월 14일 할일
+
+해야할일
+서버관리 --> 신규 눌러보면 설치제품종류 (전체, JEUS, MYSQL 이렇게 되어있는데)
+물리서버 IP정보를 colspan = 7정도로 늘리고 설치제품종류의 tr을 뺀다.
+설치제품종류는 was유형자리에 들어가고 WAS버전을 설치제품종류버전으로 바꾼다.
+설치제품버전도 적어야 한다. 복사 페이지에!!!
+
+DB 연결 -> controller통해서
+각 컬럼 선택시 해당 컬럼에 대한 팝업이 나오게끔
+-> controller 연결이 지금 안되니까 해당 칼럼 클릭시 나오는 팝업을 먼저 (html에서 만들면 될 듯-> 만들고 주석처리 하면 됨)
+
+계약명 더블클릭 -> 계약명의 상세정보 팝업
+고객사명 더블클릭 -> 고객사명 상세정보 팝업
+나머지는 -> 해당페이지의 상세정보
+div id 값 
+
+
+
+
+설치제품종류(JEUS, MYSQL) 옆에는 설치제품종류버전 Input으로 작성할 수 있게끔!
+
+
+서버 신규 등록-> 저장버튼 
+서버 신규 등록 -> 복사 팝업에서도 저장버튼 -> 신규 등록페이지의 저장버튼과 똑같은 저장
+
+1. 패키지명
+com.hcteletalk.teletalk
+se.project.main.___ -> ex) server, system, contract, clientmng
+
+-두 단어 이상 붙여도 소문자로 이어쓰기
+
+2. 팝업 페이지를 새로 추가하게 되면
+se.project.popup.___ -> ex) search, system, contract, server
+
+찾기, 등록, 상세 페이지
+ContractNewPop
+ContractDetailPop
+
+
+ContractMngController.java
+ContractMngMapper.java
+ContractMngMapper_MySQL.xml
+ContractMngRestController.java
+ContractMng.html
+ContractMng.js
+
+문제 : 파일을 옮기니까 못읽는것 같다. 
+-중간에 더블 클릭 버튼을 추가했는데 주석처리 했기 때문에 문제는 없는 것 같다.
+(고객사 상세 페이지, 시스템 상세 페이지)
+
+1. 저장버튼이 왜 안뜨지? 돌아버리겠네
+=> 메뉴권한관리에서 추가한 버튼 권한설정을 해주니까 된다. (해결완료)
+2. Data DB 연결  [각 화면 클릭시 뜨는 팝업 구성을 html페이지에 다 함 dblclick (해결완료)
+3. html js 파일 폴더 옮겼을 때 위치 설정
+->controller 변경
+
+혹시 화면설계도 바꿨는지 물어보기
+
+Mapped Statements collection does not contain value for com.hcteletalk.teletalk.mng.server.dao.TalkMngServerMapper.selectRtnServer
+이런 오류가 떴는데 이건 뭘까  => 15일 해결
+
+
